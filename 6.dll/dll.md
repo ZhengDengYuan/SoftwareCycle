@@ -60,6 +60,7 @@ __declspec(dllexport) int funAdd(int a, int b);
 
 操作如下：
 头文件--添加现有项（标头.h），源文件--添加新建项（源.cpp）（名字随意），资源文件--添加现有项（Dll1.dll和Dll1.lib）
+
 ![](https://i.imgur.com/2KWvbhX.png)
 
 3.在 源.cpp中添加内容如下：
