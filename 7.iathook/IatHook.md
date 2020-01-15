@@ -449,14 +449,14 @@
 
     输出参数:
       
-    */
-    int GetIAT(INode **iNode, PNode *pNode, unsigned int pid)
-{
-	unsigned char buff[1025] = {0};              //用于临时保存读取的buff
-	unsigned char nameAddrBuff[513] = {0};       //IAT表项函数名地址列表
-	unsigned char addrBuff[513] = {0};           //IAT表项函数地址列表
-	char dllName[NAMESIZE] = {0};                //IAT表项所属dll名
-	unsigned char nameBuff[NAMESIZE] = {0};      //IAT表项函数名
+      */
+      int GetIAT(INode **iNode, PNode *pNode, unsigned int pid)
+     {
+	  unsigned char buff[1025] = {0};              //用于临时保存读取的buff
+	  unsigned char nameAddrBuff[513] = {0};       //IAT表项函数名地址列表
+	  unsigned char addrBuff[513] = {0};           //IAT表项函数地址列表
+	  char dllName[NAMESIZE] = {0};                //IAT表项所属dll名
+	  unsigned char nameBuff[NAMESIZE] = {0};      //IAT表项函数名
 
 	PNode *bkPNode = pNode;           //初始化进程结构体链表操作指针
 	INode *bkINode = NULL;            //定义IAT表项结构体操作指针
@@ -624,7 +624,7 @@
 
 				//获取函数在内存中的地址
 				bkINode->address = addrBuff[i] + addrBuff[i+1]*256 + addrBuff[i+2]*256*256 + addrBuff[i+3]*256*256*256;
-			}
+			   }
 
 			i = i + 4;    //如果下个函数名地址为0,则说明这个dll的导入函数结束了
 			if (0 == nameAddrBuff[i] && 0 == nameAddrBuff[i+1] && 0 == nameAddrBuff[i+2] && 0 == nameAddrBuff[i+3])
@@ -672,7 +672,7 @@
 
 	CloseHandle(handle);
 	return 0;
-}
+    }
 
     /*
       函数说明:
