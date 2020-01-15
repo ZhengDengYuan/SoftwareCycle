@@ -47,7 +47,9 @@ __declspec(dllexport) int funAdd(int a, int b);
 
 
 
-#二、使用dll
+# 二、使用dll
+
+
 1.接下来重新打开一个VS2017界面，新建空项目或者控制台应用程序，这里新建一个控制台应用程序
 ![](https://i.imgur.com/x8IhnlI.png)
 
